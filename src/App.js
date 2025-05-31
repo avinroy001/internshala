@@ -1,9 +1,12 @@
+import JobCard from "./components/JobCard";
+import NavBar from "./components/Navbar";
 
 
 function App() {
   return (
     <div >
-      hiiiiii
+      <NavBar/>
+      <JobCard/>
     </div>
   );
 }
