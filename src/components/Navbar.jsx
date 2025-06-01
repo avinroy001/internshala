@@ -52,9 +52,11 @@ function NavBar() {
               letterSpacing: ".3rem",
               color: "black",
               textDecoration: "none",
+              alignItems: "center",
             }}
           >
-            INTERNSHALA
+            <span style={{ color: "#008BDC" }}>INTERN</span>
+            <span style={{ opacity: "0.5" }}>SHALA</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

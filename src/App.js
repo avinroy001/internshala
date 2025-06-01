@@ -3,6 +3,8 @@ import axios from "axios";
 import NavBar from "./components/Navbar";
 import JobCard from "./components/JobCard";
 import FilterBar from "./components/FilterBar";
+import Chip from '@mui/material/Chip';
+import "./App.css"
 
 function App() {
   const [allJobs, setAllJobs] = useState([]);
@@ -49,6 +51,9 @@ function App() {
   return (
     <div>
       <NavBar />
+      <div className='header'><h1>Latest Summer Internships</h1>
+         <Chip label={`${allJobs.length} Total Internships`} sx={{fontSize:"16px",fontWeight :500}} />
+     </div>
       <FilterBar
         filters={filters}
         setFilters={setFilters}
