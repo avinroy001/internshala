@@ -13,7 +13,6 @@ function App() {
     duration: "",
   });
 
-  // Fetch internship data on mount
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -29,7 +28,6 @@ function App() {
     fetchJobs();
   }, []);
 
-  // Apply filters on filter state change
   useEffect(() => {
     const filtered = allJobs.filter((job) => {
       const matchesProfile = filters.profile

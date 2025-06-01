@@ -1,15 +1,50 @@
 .filter-bar {
   display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin: 1rem auto;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 1.5rem 0;
+  padding: 10px;
 }
 
-.filter-bar select {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.filter-group {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease-in-out;
+  min-width: 200px;
+}
+
+.filter-group:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.filter-icon {
+  font-size: 1.2rem;
+  color: #555;
+  margin-right: 8px;
+}
+
+.filter-group select {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
   font-size: 0.95rem;
-  background-color: white;
+  color: #333;
+  outline: none;
+  padding: 4px 0;
+}
+
+.filter-group select:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
